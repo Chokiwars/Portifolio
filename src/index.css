@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --text: #6b6375;
@@ -113,3 +111,7 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
