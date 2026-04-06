@@ -1,52 +1,62 @@
 import React from "react";
 
 export default function ContactSection() {
-    return (
-        <section className="min-h-screen flex items-center justify-center bg-gray-800 text-white px-6">
-            <div className="max-w-3xl w-full text-center">
+  return (
+    <section className="relative min-h-screen flex items-center justify-center bg-gray-800 text-white px-6 overflow-hidden">
 
-                {/* Título */}
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                    Vamos conversar? 💬
-                </h2>
+      {/* Glow sutil */}
+      <div className="absolute w-[400px] h-[400px] bg-purple-500/10 blur-[120px] rounded-full bottom-[-100px] right-[-100px]" />
 
-                {/* Texto */}
-                <p className="text-gray-300 mb-10 text-lg">
-                    Estou sempre aberta a novas oportunidades, projetos ou até só um papo sobre tecnologia e arte 💜
-                </p>
+      <div className="relative max-w-5xl w-full grid md:grid-cols-2 gap-12 items-center">
 
-                {/* Botões de contato */}
-                <div className="flex flex-col md:flex-row gap-4 justify-center">
+        {/* Texto */}
+        <div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Contato
+          </h2>
 
-                    {/* Email */}
-                    <a
-                        href="mailto:seuemail@email.com"
-                        className="bg-purple-500 hover:bg-purple-600 px-6 py-3 rounded-xl font-semibold transition"
-                    >
-                        📧 Enviar Email
-                    </a>
+          <p className="text-gray-300 text-lg mb-6">
+            Estou disponível para oportunidades, projetos e colaborações.
+            Se quiser conversar, entre em contato por um dos canais abaixo.
+          </p>
 
-                    {/* LinkedIn */}
-                    <a
-                        href="#"
-                        target="_blank"
-                        className="border border-purple-400 hover:bg-purple-400 hover:text-black px-6 py-3 rounded-xl font-semibold transition"
-                    >
-                        💼 LinkedIn
-                    </a>
+          <p className="text-gray-400 text-sm">
+            Respondo normalmente em até 24 horas.
+          </p>
+        </div>
 
-                    {/* GitHub */}
-                    <a
-                        href="#"
-                        target="_blank"
-                        className="border border-white hover:bg-white hover:text-black px-6 py-3 rounded-xl font-semibold transition"
-                    >
-                        💻 GitHub
-                    </a>
+        {/* Bloco de ações */}
+        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-md space-y-4">
 
-                </div>
+          {/* Email */}
+          <a
+            href="mailto:seuemail@email.com"
+            className="block w-full text-center bg-purple-500 hover:bg-purple-600 px-6 py-3 rounded-xl font-medium transition"
+          >
+            Enviar email
+          </a>
 
-            </div>
-        </section>
-    );
+          {/* LinkedIn */}
+          <a
+            href="#"
+            target="_blank"
+            className="block w-full text-center border border-white/20 hover:border-white hover:bg-white/10 px-6 py-3 rounded-xl font-medium transition"
+          >
+            LinkedIn
+          </a>
+
+          {/* GitHub */}
+          <a
+            href="#"
+            target="_blank"
+            className="block w-full text-center border border-white/20 hover:border-white hover:bg-white/10 px-6 py-3 rounded-xl font-medium transition"
+          >
+            GitHub
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+  );
 }

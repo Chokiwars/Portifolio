@@ -2,39 +2,46 @@ import React from "react";
 
 const projects = [
     {
-        title: "Choki Website 🎨",
+        title: "Choki Website",
         description:
-            "Site artístico com galeria, animações e identidade visual focada no universo roxo.",
-        tech: ["React", "TailwindCSS"],
+            "Plataforma artística com foco em apresentação visual, navegação fluida e identidade consistente.",
+        tech: ["React", "Tailwind CSS"],
         github: "https://github.com/Chokiwars/Choki_for_you-Website",
         demo: "#",
+        image: "https://via.placeholder.com/600x400",
     },
     {
-        title: "Sistema de Gestão 💼",
+        title: "Sistema de Gestão",
         description:
-            "Sistema para gerenciamento de dados com foco em organização e produtividade.",
+            "Aplicação para gerenciamento de dados com foco em organização, usabilidade e performance.",
         tech: ["React", "Java", "Spring Boot"],
         github: "#",
         demo: "#",
+        image: "https://via.placeholder.com/600x400",
     },
     {
-        title: "Portfólio 💜",
+        title: "Portfólio",
         description:
-            "Meu portfólio pessoal desenvolvido com React e Tailwind, focado em design moderno.",
-        tech: ["React", "TailwindCSS"],
+            "Portfólio pessoal desenvolvido com foco em performance, responsividade e design moderno.",
+        tech: ["React", "Tailwind CSS"],
         github: "#",
         demo: "#",
+        image: "https://via.placeholder.com/600x400",
     },
 ];
 
 export default function ProjectsSection() {
     return (
-        <section className="min-h-screen flex items-center justify-center bg-gray-900 text-white px-6">
-            <div className="max-w-6xl w-full">
+        <section className="relative min-h-screen flex items-center justify-center bg-gray-900 text-white px-6 overflow-hidden">
+
+            {/* Glow sutil */}
+            <div className="absolute w-[400px] h-[400px] bg-purple-500/10 blur-[120px] rounded-full top-[-100px] left-[-100px]" />
+
+            <div className="relative max-w-6xl w-full">
 
                 {/* Título */}
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-                    Meus Projetos 🚀
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+                    Projetos
                 </h2>
 
                 {/* Grid */}
@@ -43,49 +50,63 @@ export default function ProjectsSection() {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-gray-800 rounded-2xl p-6 shadow-lg hover:scale-105 transition flex flex-col justify-between"
+                            className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden backdrop-blur-md transition hover:border-purple-500/50"
                         >
-                            <div>
+                            {/* Imagem */}
+                            <div className="relative overflow-hidden">
+                                <img
+                                    src={project.image}
+                                    alt={project.title}
+                                    className="w-full h-48 object-cover group-hover:scale-105 transition duration-500"
+                                />
+
+                                {/* Overlay */}
+                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-4">
+
+                                    <a
+                                        href={project.github}
+                                        target="_blank"
+                                        className="bg-purple-500 hover:bg-purple-600 px-4 py-2 rounded-lg text-sm transition"
+                                    >
+                                        GitHub
+                                    </a>
+
+                                    <a
+                                        href={project.demo}
+                                        target="_blank"
+                                        className="border border-white/30 hover:bg-white hover:text-black px-4 py-2 rounded-lg text-sm transition"
+                                    >
+                                        Demo
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            {/* Conteúdo */}
+                            <div className="p-6">
+
                                 {/* Título */}
-                                <h3 className="text-xl font-semibold mb-3 text-purple-400">
+                                <h3 className="text-lg font-semibold mb-3 text-purple-400">
                                     {project.title}
                                 </h3>
 
                                 {/* Descrição */}
-                                <p className="text-gray-300 mb-4">
+                                <p className="text-gray-300 text-sm mb-4">
                                     {project.description}
                                 </p>
 
                                 {/* Tecnologias */}
-                                <div className="flex flex-wrap gap-2 mb-4">
+                                <div className="flex flex-wrap gap-2">
                                     {project.tech.map((tech, i) => (
                                         <span
                                             key={i}
-                                            className="bg-gray-700 px-2 py-1 rounded-md text-xs"
+                                            className="bg-gray-800 px-2 py-1 rounded-md text-xs text-gray-300"
                                         >
                                             {tech}
                                         </span>
                                     ))}
                                 </div>
-                            </div>
 
-                            {/* Botões */}
-                            <div className="flex gap-3 mt-4">
-                                <a
-                                    href={project.github}
-                                    target="_blank"
-                                    className="flex-1 text-center bg-purple-500 hover:bg-purple-600 px-4 py-2 rounded-lg text-sm font-medium transition"
-                                >
-                                    GitHub
-                                </a>
-
-                                <a
-                                    href={project.demo}
-                                    target="_blank"
-                                    className="flex-1 text-center border border-purple-400 hover:bg-purple-400 hover:text-black px-4 py-2 rounded-lg text-sm font-medium transition"
-                                >
-                                    Demo
-                                </a>
                             </div>
                         </div>
                     ))}
