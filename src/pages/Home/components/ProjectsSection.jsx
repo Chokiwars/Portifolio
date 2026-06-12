@@ -1,33 +1,59 @@
 import React from "react";
 
 const projects = [
-    {
-        title: "Choki Website",
-        description:
-            "Plataforma artística com foco em apresentação visual, navegação fluida e identidade consistente.",
-        tech: ["React", "Tailwind CSS"],
-        github: "https://github.com/Chokiwars/Choki_for_you-Website",
-        demo: "#",
-        image: "https://via.placeholder.com/600x400",
-    },
-    {
-        title: "Sistema de Gestão",
-        description:
-            "Aplicação para gerenciamento de dados com foco em organização, usabilidade e performance.",
-        tech: ["React", "Java", "Spring Boot"],
-        github: "#",
-        demo: "#",
-        image: "https://via.placeholder.com/600x400",
-    },
-    {
-        title: "Portfólio",
-        description:
-            "Portfólio pessoal desenvolvido com foco em performance, responsividade e design moderno.",
-        tech: ["React", "Tailwind CSS"],
-        github: "#",
-        demo: "#",
-        image: "https://via.placeholder.com/600x400",
-    },
+  {
+    title: "Choki For You",
+    description:
+      "Plataforma artística desenvolvida para apresentar trabalhos, comissões e conteúdo visual em uma experiência moderna e responsiva.",
+    tech: ["React", "Tailwind CSS"],
+    github: "https://github.com/Chokiwars/Choki_for_you-Website",
+    demo: "https://choki-for-you-website.vercel.app/",
+    image: "/images/projects/choki.png",
+  },
+  {
+    title: "Frontend Manual",
+    description:
+      "Manual interativo voltado para desenvolvedores frontend, reunindo conceitos, referências e conteúdos de apoio em uma interface organizada.",
+    tech: ["React", "Tailwind CSS"],
+    github: "https://github.com/Chokiwars/Frontend-Manual",
+    demo: "https://frontend-manuel.vercel.app/",
+    image: "/images/projects/frontend-manual.png",
+  },
+  {
+    title: "Nova Fauna",
+    description:
+      "Guia informativo sobre animais não convencionais, com foco em educação, navegação intuitiva e apresentação de conteúdo.",
+    tech: ["React", "Tailwind CSS"],
+    github: "https://github.com/Chokiwars/Nova-Fauna",
+    demo: "https://nova-fauna.vercel.app/",
+    image: "/images/projects/nova-fauna.png",
+  },
+  {
+    title: "FrontArena",
+    description:
+      "Plataforma de competições frontend criada para incentivar prática, aprendizado e desenvolvimento de habilidades através de desafios.",
+    tech: ["React", "Tailwind CSS"],
+    github: "https://github.com/FrontArena/Frontarena-web",
+    demo: "https://frontarena.vercel.app/",
+    image: "/images/projects/frontarena.png",
+  },
+  {
+    title: "Portfólio",
+    description:
+      "Portfólio pessoal desenvolvido para apresentar projetos, experiências e competências de forma moderna e responsiva.",
+    tech: ["React", "Tailwind CSS"],
+    github: "https://github.com/Chokiwars/Chokiwars-Portifolio",
+    demo: "https://chokiwars-portifolio.vercel.app/",
+    image: "/images/projects/portfolio.png",
+  },
+  {
+    title: "O Pato",
+    description:
+      "Primeiro projeto publicado na Vercel. Um site simples que marcou o início da minha jornada com deploy e desenvolvimento web.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    demo: "https://opato.vercel.app/",
+    image: "/images/projects/opato.png",
+  },
 ];
 
 export default function ProjectsSection() {
@@ -45,7 +71,7 @@ export default function ProjectsSection() {
                 </h2>
 
                 {/* Grid */}
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
 
                     {projects.map((project, index) => (
                         <div
