@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -6,7 +7,7 @@ export default function Footer() {
       <div className="site-container footer-inner">
         <strong>bia.</strong>
         <span>© {new Date().getFullYear()} Bia. Feito com cuidado e café.</span>
-        <a href="#inicio">Voltar ao topo <ArrowUpRight size={13} /></a>
+        <Link to="/">Voltar ao início <ArrowUpRight size={13} /></Link>
       </div>
     </footer>
   );

@@ -1,4 +1,5 @@
 import { ArrowUpRight, Code2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function ContactSection() {
   return (
@@ -11,7 +12,7 @@ export default function ContactSection() {
         </div>
         <div className="contact-actions">
           <a className="button button-light" href="https://github.com/Chokiwars" target="_blank" rel="noreferrer"><Code2 size={16} /> GitHub <ArrowUpRight size={15} /></a>
-          <a className="button button-outline" href="#projetos">Ver projetos <ArrowUpRight size={15} /></a>
+          <Link className="button button-outline" to="/projetos">Ver projetos <ArrowUpRight size={15} /></Link>
         </div>
       </div>
     </section>
