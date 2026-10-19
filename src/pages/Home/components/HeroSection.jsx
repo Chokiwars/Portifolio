@@ -1,48 +1,31 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { ArrowDown, ArrowUpRight, Sparkles } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white px-6 overflow-hidden">
-      
-      {/* Glow de fundo */}
-      <div className="absolute w-[500px] h-[500px] bg-purple-500/20 blur-[120px] rounded-full top-[-100px] left-[-100px]" />
-      <div className="absolute w-[400px] h-[400px] bg-purple-700/20 blur-[120px] rounded-full bottom-[-100px] right-[-100px]" />
-
-      <div className="relative max-w-4xl text-center">
-
-        {/* Título */}
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          Desenvolvedora Frontend
-          <span className="block text-purple-400">
-            focada em experiências modernas
-          </span>
-        </h1>
-
-        {/* Subtítulo */}
-        <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-          Crio interfaces performáticas, acessíveis e visualmente consistentes, com foco em usabilidade e qualidade de código.
-        </p>
-
-        {/* Botões */}
-        <div className="flex flex-col md:flex-row gap-4 justify-center">
-
-          <Link
-            to="/projetos"
-            className="bg-purple-500 hover:bg-purple-600 px-8 py-3 rounded-xl font-medium transition shadow-lg hover:shadow-purple-500/30"
-          >
-            Ver projetos
-          </Link>
-
-          <Link
-            to="/contato"
-            className="border border-white/20 hover:border-white hover:bg-white/10 px-8 py-3 rounded-xl font-medium transition"
-          >
-            Entrar em contato
-          </Link>
-
+    <section className="hero relative py-[105px] pb-[95px]" id="inicio">
+      <div className="container mx-auto w-[min(1120px,calc(100%-64px))]">
+        <div className="hero-grid relative grid items-center gap-[60px]">
+          <div className="reveal">
+            <div className="availability"><i /> Aberta a novas oportunidades</div>
+            <p className="eyebrow">DESENVOLVEDORA FRONT-END · BRASIL</p>
+            <h1 className="font-display text-[clamp(52px,7vw,88px)] font-bold leading-[.98] tracking-[-6px]">Oi, eu sou a Bia.<br />Crio para a <em className="text-lilac not-italic">web.</em></h1>
+            <p className="hero-copy">Transformo ideias em experiências digitais intuitivas, acessíveis e cheias de personalidade. Código bem feito, design com intenção.</p>
+            <div className="hero-actions">
+              <a className="button" href="#projetos">Conheça meu trabalho <ArrowUpRight size={16} /></a>
+              <a className="text-link" href="#sobre">Um pouco sobre mim <ArrowDown size={15} /></a>
+            </div>
+          </div>
+          <div className="hero-art" aria-label="Ilustração abstrata com a inicial B">
+            <div className="orbit" />
+            <div className="art-card"><Sparkles className="art-spark" size={28} /></div>
+            <span className="art-note">design + código = ✳</span>
+          </div>
         </div>
-
+        <div className="metrics flex items-center border-y border-line py-[21px]" aria-label="Resumo de competências">
+          <div className="metric"><strong>React</strong><span>interfaces dinâmicas</span></div>
+          <div className="metric"><strong>UI &amp; UX</strong><span>experiências intuitivas</span></div>
+          <div className="metric"><strong>100%</strong><span>curiosidade por aprender</span></div>
+        </div>
       </div>
     </section>
   );
