@@ -9,7 +9,7 @@ const groups = [
 export default function SkillsSection() {
   return (
     <section className="section" id="habilidades">
-      <div className="container">
+      <div className="site-container">
         <div className="section-heading">
           <div><p className="section-kicker">02 — CAIXA DE FERRAMENTAS</p><h2>Tecnologias que uso.</h2></div>
           <p className="section-intro">As ferramentas que me ajudam a transformar uma ideia em uma experiência digital completa.</p>

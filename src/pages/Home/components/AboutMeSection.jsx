@@ -1,7 +1,7 @@
 export default function AboutMeSection() {
   return (
     <section className="section about" id="sobre">
-      <div className="container about-grid">
+      <div className="site-container about-grid">
         <div className="about-copy">
           <p className="section-kicker">01 — SOBRE MIM</p>
           <h2>Gosto de tornar<br />o digital mais humano.</h2>

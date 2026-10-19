@@ -3,7 +3,7 @@ import { ArrowDown, ArrowUpRight, Sparkles } from "lucide-react";
 export default function HeroSection() {
   return (
     <section className="hero relative py-[105px] pb-[95px]" id="inicio">
-      <div className="container mx-auto">
+      <div className="site-container mx-auto">
         <div className="hero-grid relative grid items-center gap-[60px]">
           <div className="reveal">
             <div className="availability"><i /> Aberta a novas oportunidades</div>

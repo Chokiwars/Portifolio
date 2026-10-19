@@ -13,4 +13,8 @@
 }
 
 :root{font-family:'DM Sans',sans-serif;color:#f7f1ff;background:#100b16;font-synthesis:none;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-optical-sizing:auto;font-weight:400;scroll-behavior:smooth;--paper:#100b16;--ink:#f7f1ff;--muted:#b1a4bf;--line:#392a45;--purple:#a879ff;--purple:#a879ff}
-*{box-sizing:border-box}body{margin:0;min-width:320px}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:#c6f36b;color:#22221f}img{display:block;max-width:100%}
+*{box-sizing:border-box}body{margin:0;min-width:320px}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:#ad6bf3;color:#22221f}img{display:block;max-width:100%}
+
+.site-container{width:min(1120px,calc(100% - 64px));margin-inline:auto}
+.hero .site-container,.section .site-container{width:min(1120px,100%)}
+@media(max-width:760px){.site-container{width:min(100% - 40px,560px)}.hero .site-container,.section .site-container{width:min(1120px,100%)}}

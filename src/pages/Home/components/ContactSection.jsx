@@ -3,7 +3,7 @@ import { ArrowUpRight, Code2 } from "lucide-react";
 export default function ContactSection() {
   return (
     <section className="contact section" id="contato">
-      <div className="container contact-grid">
+      <div className="site-container contact-grid">
         <div>
           <p className="section-kicker">04 — VAMOS CONVERSAR?</p>
           <h2>Tem uma ideia? Vamos tirar do papel.</h2>

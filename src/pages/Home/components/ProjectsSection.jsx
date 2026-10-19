@@ -16,7 +16,7 @@ function ProjectPreview({ label }) {
 export default function ProjectsSection() {
   return (
     <section className="section" id="projetos">
-      <div className="container">
+      <div className="site-container">
         <div className="section-heading">
           <div><p className="section-kicker">03 — FEITO COM CARINHO</p><h2>Projetos em destaque.</h2></div>
           <p className="section-intro">Um pouco do que venho construindo. Cada projeto me ensinou algo novo — e ainda tem muita coisa por vir.</p>
