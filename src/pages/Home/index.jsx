@@ -2,10 +2,10 @@ import { ArrowDownRight, ArrowUpRight, Code2, FolderOpen, Mail, UserRound } from
 import { Link } from "react-router-dom";
 
 const destinations = [
-  { title: "Sobre mim", description: "Minha história, meu jeito de trabalhar e o que me inspira.", href: "/sobre-mim", icon: UserRound },
-  { title: "Habilidades", description: "As ferramentas e tecnologias que fazem parte do meu dia a dia.", href: "/habilidades", icon: Code2 },
-  { title: "Projetos", description: "Uma seleção de trabalhos e experiências que construí.", href: "/projetos", icon: FolderOpen },
-  { title: "Contato", description: "Tem uma ideia ou oportunidade? Vamos conversar.", href: "/contato", icon: Mail },
+  { title: "Sobre mim", description: "Uma prévia da minha trajetória, dos meus interesses e da forma como gosto de trabalhar.", href: "/sobre-mim", icon: UserRound, theme: "about", detail: "PESSOA · TRAJETÓRIA · VALORES", preview: "Um pouco além do código." },
+  { title: "Habilidades", description: "Tecnologias e ferramentas que fazem parte da minha jornada de aprendizado e criação.", href: "/habilidades", icon: Code2, theme: "skills", detail: "TECNOLOGIA · FERRAMENTAS · APRENDIZADO", preview: "Ideias que ganham forma." },
+  { title: "Projetos", description: "Uma pequena vitrine do que venho construindo. Os detalhes estão na página completa.", href: "/projetos", icon: FolderOpen, theme: "projects", detail: "SELEÇÃO · PROCESSO · RESULTADOS", preview: "Feito para sair da ideia." },
+  { title: "Contato", description: "Um convite para começar uma conversa sobre oportunidades, projetos ou ideias.", href: "/contato", icon: Mail, theme: "contact", detail: "CONVERSA · IDEIAS · COLABORAÇÃO", preview: "Vamos criar algo juntas?" },
 ];
 
 export default function HomePage() {
@@ -36,13 +36,19 @@ export default function HomePage() {
             <p className="section-intro">Cada página conta uma parte diferente da minha jornada como desenvolvedora.</p>
           </div>
           <div className="home-link-grid">
-            {destinations.map(({ title, description, href, icon: Icon }, index) => (
-              <Link className="home-link-card" to={href} key={href}>
-                <span className="home-link-number">0{index + 1}</span>
-                <Icon size={20} className="home-link-icon" />
-                <h3>{title}</h3>
-                <p>{description}</p>
-                <ArrowUpRight className="home-link-arrow" size={18} />
+            {destinations.map(({ title, description, href, icon: Icon, theme, detail, preview }, index) => (
+              <Link className={`home-link-card home-link-${theme}`} to={href} key={href}>
+                <div className="home-link-visual" aria-hidden="true">
+                  <span className="home-link-number">0{index + 1} / 04</span>
+                  <div className="home-link-orbit"><Icon className="home-link-icon" size={29} /></div>
+                  <span className="home-link-visual-label">{preview}</span>
+                </div>
+                <div className="home-link-copy">
+                  <span className="home-link-detail">{detail}</span>
+                  <h3>{title}</h3>
+                  <p>{description}</p>
+                  <span className="home-link-action">Explorar página <ArrowUpRight className="home-link-arrow" size={16} /></span>
+                </div>
               </Link>
             ))}
           </div>
