@@ -8,7 +8,7 @@ export default function HeroSection() {
           <div className="reveal">
             <div className="availability"><i /> Aberta a novas oportunidades</div>
             <p className="eyebrow">DESENVOLVEDORA FRONT-END · BRASIL</p>
-            <h1 className="font-display text-[clamp(52px,7vw,88px)] font-bold leading-[.98] tracking-[-6px]">Oi, eu sou a Bia.<br />Crio para a <em className="text-lilac not-italic">web.</em></h1>
+            <h1 className="font-display text-[clamp(52px,7vw,88px)] font-bold leading-[.98] tracking-[-6px]">Olá, eu sou a Bia.<br />Crio para a <em className="text-lilac not-italic">web.</em></h1>
             <p className="hero-copy">Transformo ideias em experiências digitais intuitivas, acessíveis e cheias de personalidade. Código bem feito, design com intenção.</p>
             <div className="hero-actions">
               <a className="button" href="#projetos">Conheça meu trabalho <ArrowUpRight size={16} /></a>
