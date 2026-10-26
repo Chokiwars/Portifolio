@@ -101,3 +101,20 @@ img {
     width: calc(100% - 32px);
   }
 }
+
+.topbar .site-container {
+  width: calc(100% - 64px);
+  max-width: 1120px;
+}
+
+@media (max-width: 760px) {
+  .topbar .site-container {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 400px) {
+  .topbar .site-container {
+    width: calc(100% - 32px);
+  }
+}

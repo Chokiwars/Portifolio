@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Code2, Menu, X } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 
 const links = [
@@ -14,7 +14,10 @@ export default function Header() {
   return (
     <header className="topbar sticky top-0 z-20 border-b border-ink/10 bg-paper/90 backdrop-blur-lg">
       <div className="site-container nav mx-auto flex h-full items-center justify-between">
-        <Link className="brand font-display text-[21px] font-extrabold tracking-[-1.2px]" to="/" onClick={() => setOpen(false)} aria-label="Bia, início">bia<span className="text-lilac">.</span></Link>
+        <Link className="brand font-display text-[21px] font-extrabold tracking-[-1.2px]" to="/" onClick={() => setOpen(false)} aria-label="Bia, início">
+          <span className="brand-mark" aria-hidden="true"><Code2 size={19} strokeWidth={2.2} /></span>
+          <span>bia<span className="text-lilac">.</span></span>
+        </Link>
         <nav className={`navlinks${open ? " open" : ""}`} aria-label="Navegação principal">
           {links.map(([label, path]) => <NavLink key={path} to={path} onClick={() => setOpen(false)} className={({ isActive }) => isActive ? "active" : ""}>{label}</NavLink>)}
         </nav>
